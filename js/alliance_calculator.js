@@ -1,6 +1,8 @@
 const GOLD_DIV_NUMBER = 3;
 const BUTTLE_CHIPS_DIV_NUMBER = 2;
 const LOALTY_DIV_NUMBER = 1;
+const DAY_COUNT = 5;
+const MAP_COUNT = 6;
 
 var selects = {
     day1: document.getElementById('selectDay1'),
@@ -9,6 +11,28 @@ var selects = {
     day4: document.getElementById('selectDay4'),
     day5: document.getElementById('selectDay5'), 
 }
+
+var options = {
+    day1: selects.day1.getElementsByTagName('option'),
+    day2: selects.day2.getElementsByTagName('option'),
+    day3: selects.day3.getElementsByTagName('option'),
+    day4: selects.day4.getElementsByTagName('option'),
+    day5: selects.day5.getElementsByTagName('option'), 
+}
+
+
+for(i = 1; i <= DAY_COUNT; i++){
+    for(j = 1; j <= MAP_COUNT; j++){
+        options['day' + i][j-1].textContent = maps['map' + j].title.EN;
+    }
+}
+
+
+
+
+
+
+
 
 var divs = {
     day1: document.getElementById('day1').getElementsByTagName('div'),

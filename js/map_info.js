@@ -1,8 +1,10 @@
 var maps = {
     
     map1: {
-        titleRU: "Первая карта",
-        titleEN: "map 1",
+        title:{
+            RU: "Первая карта",
+            EN: "map 1",
+        },
         multiplier: "",
         cost: {
             gold: 0,
@@ -12,8 +14,10 @@ var maps = {
     },
     
     map2: {
-        titleRU: "Вторая карта",
-        titleEN: "map 2",
+        title:{
+            RU: "Вторая карта",
+            EN: "map 2",
+        },
         multiplier: "",
         cost: {
             gold: 0,
@@ -22,8 +26,10 @@ var maps = {
         },
     },
     map3: {
-        titleRU: "Третья карта",
-        titleEN: "map 3",
+        title:{
+            RU: "Третья карта",
+            EN: "map 3",
+        },
         multiplier: "",
         cost: {
             gold: 0,
@@ -32,8 +38,10 @@ var maps = {
         },
     },
     map4: {
-        titleRU: "Четвертая карта",
-        titleEN: "map 4",
+        title:{
+            RU: "Четвертая карта",
+            EN: "map 4",
+        },
         multiplier: "",
         cost: {
             gold: 400000,
@@ -42,8 +50,10 @@ var maps = {
         },
     },
     map5: {
-        titleRU: "Пятая карта",
-        titleEN: "map 5",
+        title:{
+            RU: "Пятая карта",
+            EN: "map 5",
+        },
         multiplier: "",
         cost: {
             gold: 800000,
@@ -52,8 +62,10 @@ var maps = {
         },
     },
     map6: {
-        titleRU: "Шестая карта",
-        titleEN: "map 6",
+        title:{
+            RU: "Шестая карта",
+            EN: "map 6",
+        },
         multiplier: "",
         cost: {
             gold: 3000000,
