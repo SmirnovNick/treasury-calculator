@@ -12,14 +12,18 @@ body{
 
 .calculator_body{
     padding: 1%;
-    background-color: bisque;
+    background-color: #2b2c30;
 }
 
+.map_row {
+    background-color: #1d1e22;
+    margin: 5px;
+}
 .map_row  div{
-   
+   color: #f2fded;
     margin: 1%;
     width: 17.6%;
-    background-color: aqua;
+    background-color: #000000;
     border: 1px solid black;
 	
 }

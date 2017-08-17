@@ -17,9 +17,10 @@ var divs = {
     day4: document.getElementById('day4').getElementsByTagName('div'),
     day5: document.getElementById('day5').getElementsByTagName('div'),  
     total: document.getElementById('total').getElementsByTagName('div'),
+    forOne: document.getElementById('for_one').getElementsByTagName('div'),
 }
 
-
+var formatter = new Intl.NumberFormat("ru");
 
 selects.day1.onchange = () => setPrice('day1',selects.day1.value);
 selects.day2.onchange = () => setPrice('day2',selects.day2.value);
@@ -73,8 +74,12 @@ function setTotalPrice() {
     };
     
     
-    divs['total'][LOALTY_DIV_NUMBER].innerHTML = loalty.sum();      
-    divs['total'][BUTTLE_CHIPS_DIV_NUMBER].innerHTML = buttleChips.sum(); 
-    divs['total'][GOLD_DIV_NUMBER].innerHTML = gold.sum();     
+    divs['total'][LOALTY_DIV_NUMBER].innerHTML = loalty.sum().toLocaleString();      
+    divs['total'][BUTTLE_CHIPS_DIV_NUMBER].innerHTML = buttleChips.sum().toLocaleString(); 
+    divs['total'][GOLD_DIV_NUMBER].innerHTML = gold.sum().toLocaleString(); 
+    
+    divs['forOne'][LOALTY_DIV_NUMBER].innerHTML = (Math.ceil(loalty.sum()/30)).toLocaleString();      
+    divs['forOne'][BUTTLE_CHIPS_DIV_NUMBER].innerHTML = (Math.ceil(buttleChips.sum()/30)).toLocaleString(); 
+    divs['forOne'][GOLD_DIV_NUMBER].innerHTML = (Math.ceil(gold.sum()/30)).toLocaleString();  
     
 }
