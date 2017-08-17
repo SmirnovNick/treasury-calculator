@@ -1,72 +1,80 @@
-var maps = {
-    map1: {
-        titleRU: "1sx nmqwvv ghbdtn",
-        titleEN: "",
-        multiplier: "",
-        cost: {
-            buttleChips: 0,
-            gold: 0,
-            loalty: 0,
-        },
-    },
-    map2: {
-        titleRU: "1 ghbdtn",
-        titleEN: "",
-        multiplier: "",
-        cost: {
-            buttleChips: 0,
-            gold: 0,
-            loalty: 0,
-        },
-    },
-    map3: {
-        titleRU: "1 ghbdtn",
-        titleEN: "",
-        multiplier: "",
-        cost: {
-            buttleChips: 0,
-            gold: 0,
-            loalty: 0,
-        },
-    },
-    map4: {
-        titleRU: "1 ghbdtn",
-        titleEN: "",
-        multiplier: "",
-        cost: {
-            buttleChips: 0,
-            gold: 400000,
-            loalty: 25000,
-        },
-    },
-    map5: {
-        titleRU: "1 ghbdtn",
-        titleEN: "",
-        multiplier: "",
-        cost: {
-            buttleChips: 175000,
-            gold: 800000,
-            loalty: 75000,
-        },
-    },
-    map6: {
-        titleRU: "1 ghbdtn",
-        titleEN: "",
-        multiplier: "",
-        cost: {
-            buttleChips: 200000,
-            gold: 500000,
-            loalty: 3000000,
-        },
-    },    
-};
+const GOLD_DIV_NUMBER = 3;
+const BUTTLE_CHIPS_DIV_NUMBER = 2;
+const LOALTY_DIV_NUMBER = 1;
 
-var day1= document.getElementById('day01'); 
-var jsd = day1.childNodes;
+var selects = {
+    day1: document.getElementById('selectDay1'),
+    day2: document.getElementById('selectDay2'),
+    day3: document.getElementById('selectDay3'),
+    day4: document.getElementById('selectDay4'),
+    day5: document.getElementById('selectDay5'), 
+}
 
-document.getElementById('day1_select').onchange = function () {
+var divs = {
+    day1: document.getElementById('day1').getElementsByTagName('div'),
+    day2: document.getElementById('day2').getElementsByTagName('div'),
+    day3: document.getElementById('day3').getElementsByTagName('div'),
+    day4: document.getElementById('day4').getElementsByTagName('div'),
+    day5: document.getElementById('day5').getElementsByTagName('div'),  
+    total: document.getElementById('total').getElementsByTagName('div'),
+}
+
+
+
+selects.day1.onchange = () => setPrice('day1',selects.day1.value);
+selects.day2.onchange = () => setPrice('day2',selects.day2.value);
+selects.day3.onchange = () => setPrice('day3',selects.day3.value);
+selects.day4.onchange = () => setPrice('day4',selects.day4.value);
+selects.day5.onchange = () => setPrice('day5',selects.day5.value);
+
+function setPrice(day, map){
     
-    alert(this.id);
-    document.getElementById("day1_gold").innerHTML = jsd;
-    alert(document.getElementById("day1_gold").innerHTML);
+    divs[day][LOALTY_DIV_NUMBER].innerHTML = maps[map].cost.loalty;      
+    divs[day][BUTTLE_CHIPS_DIV_NUMBER].innerHTML = maps[map].cost.buttleChips; 
+    divs[day][GOLD_DIV_NUMBER].innerHTML = maps[map].cost.gold;       
+    
+    setTotalPrice();
+}
+
+function setTotalPrice() {
+    
+    let buttleChips = {
+        day1: parseInt(divs['day1'][BUTTLE_CHIPS_DIV_NUMBER].innerHTML),
+        day2: parseInt(divs['day2'][BUTTLE_CHIPS_DIV_NUMBER].innerHTML),
+        day3: parseInt(divs['day3'][BUTTLE_CHIPS_DIV_NUMBER].innerHTML),
+        day4: parseInt(divs['day4'][BUTTLE_CHIPS_DIV_NUMBER].innerHTML),
+        day5: parseInt(divs['day5'][BUTTLE_CHIPS_DIV_NUMBER].innerHTML),
+        
+        sum: function(){
+        return this.day1 + this.day2 + this.day3 + this.day4 + this.day5;
+        }
+    };
+    let loalty = {
+        day1: parseInt(divs['day1'][LOALTY_DIV_NUMBER].innerHTML),
+        day2: parseInt(divs['day2'][LOALTY_DIV_NUMBER].innerHTML),
+        day3: parseInt(divs['day3'][LOALTY_DIV_NUMBER].innerHTML),
+        day4: parseInt(divs['day4'][LOALTY_DIV_NUMBER].innerHTML),
+        day5: parseInt(divs['day5'][LOALTY_DIV_NUMBER].innerHTML),
+        
+        sum: function(){
+        return this.day1 + this.day2 + this.day3 + this.day4 + this.day5;
+        }
+    };
+    let gold = {
+        day1: parseInt(divs['day1'][GOLD_DIV_NUMBER].innerHTML),
+        day2: parseInt(divs['day2'][GOLD_DIV_NUMBER].innerHTML),
+        day3: parseInt(divs['day3'][GOLD_DIV_NUMBER].innerHTML),
+        day4: parseInt(divs['day4'][GOLD_DIV_NUMBER].innerHTML),
+        day5: parseInt(divs['day5'][GOLD_DIV_NUMBER].innerHTML),
+        
+        sum: function(){
+        return this.day1 + this.day2 + this.day3 + this.day4 + this.day5;
+        }
+    };
+    
+    
+    divs['total'][LOALTY_DIV_NUMBER].innerHTML = loalty.sum();      
+    divs['total'][BUTTLE_CHIPS_DIV_NUMBER].innerHTML = buttleChips.sum(); 
+    divs['total'][GOLD_DIV_NUMBER].innerHTML = gold.sum();     
+    
 }
