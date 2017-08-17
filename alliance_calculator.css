@@ -1,0 +1,25 @@
+body{
+    margin: 0%;
+}
+
+.map_row{
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+     flex-wrap: wrap;
+}
+
+.calculator_body{
+    padding: 1%;
+    background-color: bisque;
+}
+
+.map_row  div{
+   
+    margin: 1%;
+    width: 17.6%;
+    background-color: aqua;
+    border: 1px solid black;
+	
+}
