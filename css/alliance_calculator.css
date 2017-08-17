@@ -1,12 +1,15 @@
+@import url(http://allfont.ru/allfont.css?fonts=eurostyle-normal);
+
+
 body{
+    font-family:  'EuroStyle Normal', arial;
     margin: 0%;
 }
 
 .map_row{
-    display: -webkit-flex;
+   
 	display: flex;
-	-webkit-flex-direction: row;
-	flex-direction: row;
+	
      flex-wrap: wrap;
 }
 
@@ -20,6 +23,11 @@ body{
     margin: 5px;
 }
 .map_row  div{
+    height: 30px;;
+   line-height: 30px;
+    text-align: center;
+    
+    
    color: #f2fded;
     margin: 1%;
     width: 17.6%;
