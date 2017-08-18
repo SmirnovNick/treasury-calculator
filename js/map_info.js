@@ -2,10 +2,10 @@ var maps = {
     
     map1: {
         title:{
-            RU: "Первая карта",
-            EN: "map 1",
+            RU: "1. Изучение азов",
+            EN: "1. Learning the Ropes",
         },
-        multiplier: "",
+        multiplier: 1,
         cost: {
             gold: 0,
             buttleChips: 0,
@@ -15,10 +15,10 @@ var maps = {
     
     map2: {
         title:{
-            RU: "Вторая карта",
-            EN: "map 2",
+            RU: "2. Объединенная мощь",
+            EN: "2. Linked Power",
         },
-        multiplier: "",
+        multiplier: 1.5,
         cost: {
             gold: 0,
             buttleChips: 0,
@@ -27,10 +27,10 @@ var maps = {
     },
     map3: {
         title:{
-            RU: "Третья карта",
-            EN: "map 3",
+            RU: "3. Разные пути",
+            EN: "3. Dividing Paths",
         },
-        multiplier: "",
+        multiplier: 2,
         cost: {
             gold: 0,
             buttleChips: 0,
@@ -39,10 +39,10 @@ var maps = {
     },
     map4: {
         title:{
-            RU: "Четвертая карта",
-            EN: "map 4",
+            RU: "4. Обман Дормамму",
+            EN: "4. Dormammu's Deceit",
         },
-        multiplier: "",
+        multiplier: 3,
         cost: {
             gold: 400000,
             buttleChips: 0,
@@ -51,10 +51,10 @@ var maps = {
     },
     map5: {
         title:{
-            RU: "Пятая карта",
-            EN: "map 5",
+            RU: "5. Гарнизон измерений",
+            EN: "5. Dimensional Garrison",
         },
-        multiplier: "",
+        multiplier: 7,
         cost: {
             gold: 800000,
             buttleChips: 175000,
@@ -63,10 +63,10 @@ var maps = {
     },
     map6: {
         title:{
-            RU: "Шестая карта",
-            EN: "map 6",
+            RU: "6. Шпиль величия",
+            EN: "6. Pinnacle of Power",
         },
-        multiplier: "",
+        multiplier: 10,
         cost: {
             gold: 3000000,
             buttleChips:500000,

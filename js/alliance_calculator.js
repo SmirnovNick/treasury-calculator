@@ -21,17 +21,11 @@ var options = {
 }
 
 
-for(i = 1; i <= DAY_COUNT; i++){
-    for(j = 1; j <= MAP_COUNT; j++){
-        options['day' + i][j-1].textContent = maps['map' + j].title.EN;
+for(let i = 1; i <= DAY_COUNT; i++){
+    for(let j = 1; j <= MAP_COUNT; j++){
+        options['day' + i][j-1].textContent = maps['map' + j].title.RU;
     }
 }
-
-
-
-
-
-
 
 
 var divs = {
