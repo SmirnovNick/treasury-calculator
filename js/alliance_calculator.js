@@ -43,31 +43,26 @@ var currentPrice = {
         gold: 0,
         loalty: 0,
         buttleChips: 0,
-        
     },
     day2: {
         gold: 0,
         loalty: 0,
         buttleChips: 0,
-        
     },
     day3: {
         gold: 0,
         loalty: 0,
         buttleChips: 0,
-        
     },
     day4: {
         gold: 0,
         loalty: 0,
         buttleChips: 0,
-        
     },
     day5: {
         gold: 0,
         loalty: 0,
         buttleChips: 0,
-        
     },
     
     loaltySum: function(){
@@ -89,6 +84,7 @@ var currentPrestige = {
     day4: 0,
     day5: 0,
 }
+
 var currentScore = {
     day1: 0,
     day2: 0,
@@ -100,10 +96,6 @@ var currentScore = {
         return this.day1 + this.day2 + this.day3 + this.day4 + this.day5;
     }
 }
-
-
-
-
 
 for(let i = 1; i <= DAY_COUNT; i++){
     for(let j = 1; j <= MAP_COUNT; j++){
@@ -121,21 +113,19 @@ inputs.prestige.onchange = () =>  update();
 
 
 function update(){
+
     setPrestige();
     
     for(let i = 1; i <= 5; i++){
-    setPrice('day'+ i, selects['day' + i].value);
+
+        setPrice('day'+ i, selects['day' + i].value);
     
-    setScore('day'+ i, selects['day' + i].value, currentPrestige['day' + i]);
+        setScore('day'+ i, selects['day' + i].value, currentPrestige['day' + i]);
     
     }
     
-    
-    
-    
-     setTotalPrice();
-    
-    
+    setTotal();
+
 }
 
 
@@ -149,23 +139,21 @@ function setPrice(day, map){
     divs[day][BUTTLE_CHIPS_DIV_NUMBER].innerHTML = maps[map].cost.buttleChips.toLocaleString(); 
     divs[day][GOLD_DIV_NUMBER].innerHTML = maps[map].cost.gold.toLocaleString();       
     
-    setTotalPrice();
+    setTotal();
 }
 
-function setTotalPrice() {
+function setTotal() {
     
     let groupCount = selects.groupCount.value;
     
     divs.total[LOALTY_DIV_NUMBER].innerHTML = currentPrice.loaltySum().toLocaleString();      
     divs.total[BUTTLE_CHIPS_DIV_NUMBER].innerHTML = currentPrice.buttleChipsSum().toLocaleString(); 
     divs.total[GOLD_DIV_NUMBER].innerHTML = currentPrice.goldSum().toLocaleString(); 
+    divs.total[SCORE_DIV_NUMBER].innerHTML = currentScore.sum().toLocaleString();
     
     divs.forOne[LOALTY_DIV_NUMBER].innerHTML = (Math.ceil(currentPrice.loaltySum()/(10 * groupCount))).toLocaleString();      
     divs.forOne[BUTTLE_CHIPS_DIV_NUMBER].innerHTML = (Math.ceil(currentPrice.buttleChipsSum()/(10 * groupCount))).toLocaleString(); 
     divs.forOne[GOLD_DIV_NUMBER].innerHTML = (Math.ceil(currentPrice.goldSum()/(10 * groupCount))).toLocaleString();
-
-    divs.total[SCORE_DIV_NUMBER].innerHTML = currentScore.sum().toLocaleString();
-    
 }
 
 function setPrestige() {
@@ -185,10 +173,12 @@ function setScore(day, map, prestige){
     
     let groupCount = selects.groupCount.value;
 
-    mapMultiplier = maps[map].multiplier;
-    prestigeMultiplier = getPrestigeMultiplier(map, prestige);
+    let mapMultiplier = maps[map].multiplier;
+
+    let prestigeMultiplier = getPrestigeMultiplier(map, prestige);
     
     let score = prestige * mapMultiplier * prestigeMultiplier * groupCount / 3;
+
     currentScore[day] = Math.round(score);
     divs[day][SCORE_DIV_NUMBER].innerHTML = Math.round(score).toLocaleString();
    
