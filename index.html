@@ -3,20 +3,42 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/alliance_calculator.css">
-        
     </head>
     <body>
     <div class="calculator_body">
-        <div  class="title">
-            
+       <div class="active_row">
+           <div>Начальный престиж</div>
+           <div><input id="prestige" type="number" class="prestige" min="0" placeholder="PRESTIGE" value="0"></div>
+           <div>Количество групп</div>
+           <div>
+              <select name="" id="groupCount">
+               <option value="3">3</option>
+               <option value="2">2</option>
+               <option value="1">1</option>
+              </select>
+           </div>
+       </div>
+       <div  class="title_row">
            <div>
                MAP
            </div>
-           <div>LOYATY</div>
-           <div>BUTTLE CHIPS</div>
-           <div>GOLD</div>
+           <div>
+               LOYATY
+           </div>
+           <div>
+               BUTTLE CHIPS
+           </div>
+           <div>
+               GOLD
+           </div>
+           <div>
+               PRESTIGE
+           </div>
+           <div>
+                SCORE
+           </div>
        </div>
-       <div id="day1" class="map_row">
+       <div id="day1" class="active_row">
            <div>
                <select id="selectDay1">
                    <option value="map1"></option>
@@ -30,13 +52,10 @@
            <div>0</div>
            <div>0</div>
            <div>0</div>
+           <div>0</div>
+           <div>0</div>
        </div>
-        
-        
-        
-        
-        
-    <div id="day2" class="map_row">
+       <div id="day2" class="active_row">
            <div>
                <select id="selectDay2">
                    <option value="map1"></option>
@@ -50,8 +69,10 @@
            <div>0</div>
            <div>0</div>
            <div>0</div>
+           <div>0</div>
+           <div>0</div>
        </div>
-        <div id="day3" class="map_row">
+       <div id="day3" class="active_row">
            <div>
                <select id="selectDay3">
                    <option value="map1"></option>
@@ -65,8 +86,10 @@
            <div>0</div>
            <div>0</div>
            <div>0</div>
+           <div>0</div>
+           <div>0</div>
        </div>
-        <div id="day4" class="map_row">
+       <div id="day4" class="active_row">
            <div>
                <select id="selectDay4">
                    <option value="map1"></option>
@@ -80,8 +103,10 @@
            <div>0</div>
            <div>0</div>
            <div>0</div>
+           <div>0</div>
+           <div>0</div>
        </div>
-        <div id="day5" class="map_row">
+       <div id="day5" class="active_row">
            <div>
                <select id="selectDay5">
                    <option value="map1">1</option>
@@ -95,24 +120,38 @@
            <div>0</div>
            <div>0</div>
            <div>0</div>
+           <div>0</div>
+           <div>0</div>
        </div>
-        <div  class="title">
+       <div  class="title_row" >
+           <div></div>
            <div>
-               
+               LOYATY
            </div>
-           <div>LOYATY</div>
-           <div>BUTTLE CHIPS</div>
-           <div>GOLD</div>
+           <div>
+               BUTTLE CHIPS
+           </div>
+           <div>
+               GOLD
+           </div>
+           <div>
+               PRESTIGE
+           </div>
+           <div>
+               SCORE
+           </div>
        </div>
-        <div id="total" class="map_row">
+       <div id="total" class="active_row">
            <div>
                TOTAL:
            </div>
            <div>0</div>
            <div>0</div>
            <div>0</div>
+           <div>0</div>
+           <div>0</div>
        </div>
-        <div id="for_one" class="map_row">
+       <div id="for_one" class="active_row">
            <div>
                FOR ONE:
            </div>

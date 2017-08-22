@@ -6,60 +6,60 @@ body{
     margin: 0%;
 }
 
-.map_row, .title{
+
+
+.active_row, .title_row{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1d1e22;
+    margin: 1%;
    
-	display: flex;
-	
-     flex-wrap: wrap;
+    
 }
+.active_row div, .title_row div{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 1%;
+    width: 14%;
+    color: #f2fded;
+}
+
+.active_row div{
+    background-color: #000000;
+}
+
+
+
+
+
+
 
 .calculator_body{
     padding: 1%;
     background-color: #2b2c30;
 }
 
-.map_row, .title {
-    background-color: #1d1e22;
-    margin: 1%;
-}
 
-.map_row select{
+
+ select, .prestige{
     font-family:  'EuroStyle Normal', arial;
     letter-spacing: 1px;
     width: 100%;
     height: 100%;
-     color: #f2fded;
-     background-color: #000000;
-    border: 1px solid black;
-}
-.map_row  div{
-    height: 30px;;
-   line-height: 30px;
-    text-align: center;
-    
-    
-   color: #f2fded;
-    margin: 1%;
-    width: 17.6%;
+    color: #f2fded;
     background-color: #000000;
     border: 1px solid black;
-	
 }
 
- .title div{
-    height: 30px;;
-   line-height: 30px;
+.prestige{
+    font-size: inherit;
     text-align: center;
     
-    
-   color: #f2fded;
-    margin: 1%;
-    width: 17.6%;
-   
-	
+    -webkit-appearance: value;
+   -moz-appearance:    value;
+   appearance:         value;
 }
-
-
 
 
 
