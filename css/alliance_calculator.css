@@ -1,21 +1,17 @@
 @import url(http://allfont.ru/allfont.css?fonts=eurostyle-normal);
 
-
 body{
     font-family:  'EuroStyle Normal', arial;
     margin: 0%;
 }
-
-
 
 .active_row, .title_row{
     display: flex;
     flex-wrap: wrap;
     background-color: #1d1e22;
     margin: 1%;
-   
-    
 }
+
 .active_row div, .title_row div{
     height: 30px;
     line-height: 30px;
@@ -29,18 +25,10 @@ body{
     background-color: #000000;
 }
 
-
-
-
-
-
-
 .calculator_body{
     padding: 1%;
     background-color: #2b2c30;
 }
-
-
 
  select, .prestige{
     font-family:  'EuroStyle Normal', arial;
@@ -50,35 +38,29 @@ body{
     color: #f2fded;
     background-color: #000000;
     border: 1px solid black;
+    font-size: inherit;
+
 }
 
 .prestige{
     font-size: inherit;
     text-align: center;
-    
-    -webkit-appearance: value;
-   -moz-appearance:    value;
-   appearance:         value;
 }
 
 
 
+/*
 @media screen and (max-width:800px) {
-  /* Target portrait smartphones */
 
-    .title div{
+.title div{
     height: 30px;
-   line-height: 30px;
+    line-height: 30px;
     text-align: center;
     background-color: whitesmoke;
-    
-   color: #f2fded;
+    color: #f2fded;
     margin: 1%;
     width: 17.6%;
-   
-	
-}
- 
-    
-    
-}
+   }
+
+ }
+*/
