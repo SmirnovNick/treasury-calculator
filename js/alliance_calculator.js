@@ -103,6 +103,7 @@ for(let i = 1; i <= DAY_COUNT; i++){
     }
 }
 
+
 selects.day1.onchange = () => update();
 selects.day2.onchange = () => update();
 selects.day3.onchange = () => update();
@@ -218,7 +219,7 @@ function getPrestigeMultiplier(map, prestige){
             if (prestige < 5000) {
                 return 445;
             }else if (prestige >= 5000) {
-                return 449;
+                return 461;
             }
         case 'map6': 
             return 469;

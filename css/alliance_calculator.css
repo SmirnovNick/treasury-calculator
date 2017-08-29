@@ -5,14 +5,14 @@ body{
     margin: 0%;
 }
 
-.active_row, .title_row{
+.active_row, .title_row, .info_row{
     display: flex;
     flex-wrap: wrap;
     background-color: #1d1e22;
     margin: 1%;
 }
 
-.active_row div, .title_row div{
+.active_row div, .title_row div, .info_row div{
     height: 30px;
     line-height: 30px;
     text-align: center;
@@ -21,9 +21,10 @@ body{
     color: #f2fded;
 }
 
-.active_row div{
+.active_row div, .info_row div{
     background-color: #000000;
 }
+
 
 .calculator_body{
     padding: 1%;
@@ -48,19 +49,33 @@ body{
 }
 
 
-
 /*
+8 - margin
+10 -map
+35 - maptitle
+37
+*/
+
 @media screen and (max-width:800px) {
 
-.title div{
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    background-color: whitesmoke;
-    color: #f2fded;
-    margin: 1%;
-    width: 17.6%;
-   }
+.active_row div:nth-child(n+2):nth-child(-n+4), .title_row div:nth-child(n+2):nth-child(-n+4){
+    display: none;
+}
+
+    .active_row div:first-child, .active_row div:nth-child(n+4), .title_row div:first-child, .title_row div:nth-child(n+4){
+        width: 30.333333333%;
+    }
+    .info_row div:nth-child(odd){
+        width: 25%;
+        background-color: #1d1e22;
+        letter-spacing: 1px;
+    }
+    .info_row div:nth-child(2){
+        width: 25%;
+    }
+    .info_row div:nth-child(4){
+        width: 17%;
+    }
 
  }
-*/
+
